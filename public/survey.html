@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script defer src="/static/fontawesome/fontawesome-all.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><i class="fas fa-users"></i> Friend Finder</h1>
+      <hr>
+      <br>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Survey Page -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Survey Questions</h2>
+          </div>
+          <div class="panel-body">
+
+            <form role="form">
+
+              <div class="form-group">
+                <label for="user-name">Name <i>required</i></label>
+                <input type="text" class="form-control" id="user-name">
+              </div>
+
+              <div class="form-group">
+                <label for="user-phone">Link to your photo image <i>required</i></label>
+                <input type="text" class="form-control" id="user-phone">
+              </div>
+              <hr>
+              <div class="form-group">
+                <h4>Question 1</h4>
+                <label for="select1">I am a critical thinking feminist</label>
+                <select class="form-control" id="select1">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 2</h4>
+                <label for="select2">I enjoy keeping up with local artists</label>
+                <select class="form-control" id="select2">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>  
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 3</h4>
+                <label for="select3">I like to play sports</label>
+                <select class="form-control" id="select3">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option> 
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 4</h4>  
+                <label for="select4">I'm free nights and weekends</label>
+                <select class="form-control" id="select4">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 5</h4>
+                <label for="select5">I'm have a flexible schedule</label>
+                <select class="form-control" id="select5">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 6</h4>  
+                <label for="select6">I like to go out and experience the nightlife</label>
+                <select class="form-control" id="select6">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 7</h4>
+                <label for="select7">I like to stay in with my computer tv</label>
+                <select class="form-control" id="select7">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 8</h4>
+                <label for="select8">I am open to new experiences and being uncomfortable</label>
+                <select class="form-control" id="select8">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 9</h4>
+                <label for="select9">I am often grateful</label>
+                <select class="form-control" id="select9">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <h4>Question 10</h4>
+                <label for="select10">I try to engineer a happy life for myself</label>
+                <select class="form-control" id="select10">
+                  <option>1 (strongly disagree)</option>
+                  <option>2 (disagree)</option>
+                  <option>3 (neutral)</option>
+                  <option>4 (agree)</option>
+                  <option>5 (strongly agree)</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friend Link</a> | <a href="https://github.com/sarleone/friend_finder">GitHub Repo</a></p>
+        </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $(".submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Here we grab the form elements
+      var newFriend = {
+        friendName: $("#user-name").val().trim(),
+        photo: $("#user-photo"),
+        scores: [ 
+          $("#select1"),
+          $("#select2"),
+          $("#select3"),
+          $("#select4"),
+          $("#select5"),
+          $("#select6"),
+          $("#select7"),
+          $("#select8"),
+          $("#select9"),
+          $("#select10")
+        ]
+      };
+
+      console.log(newFriend);
+
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
+
+      $.post("/api/friends", newFriend,
+        function(data) {
+
+          // tell user they have a match.
+            alert("Yay! You have a friend match!");
+          }
+          // Clear the form when submitting
+          $("#user-name").val("");
+          $("#user-photo").val("");
+
+        });
+
+    });
+</script>
