@@ -17,9 +17,12 @@ module.exports = function(app) {
   // In each of the below cases when a user visits a link
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
+  var bodyParser = require("body-parser");
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
 
   app.get("/api/friends", function(req, res) {
-    res.json(newFriend);
+    res.json(friendsfriendsArray);
   });
 
   // API POST Requests
@@ -34,45 +37,9 @@ module.exports = function(app) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body-parser middleware
-      var userInput = req.body;
-      var userResult = userInput.scores;
-      console.log("User Score Input: " + userResult);
-      //-------------------------------------------------------------------------
-      // Building a comparing system! 
-      // VARIABLES
-      var totalDifference = 0;
-      var bestMatch = {
-        name: "",
-        photo: "",
-        difference: 50
-      }
-      // Search for si
-      for (var i=0; i<friendData.length; i++) {
-        for(var k=0; k<userResult.length; k++) {
-          totalDifference += Math.abs(parseInt(friendData[i].scores[k]-userResult[k]));
-          console.log("Friend data score: " + friendData[i].scores[j]);
-        }
-      }
-
-
-    userArr.push(req.body);
-      res.json(true);
-    
-    // else {
-    //   waitListData.push(req.body);
-    //   res.json(false);
-    // }
+    console.log(req.body); 
+    var userInput = new friends.Friend(req.body.name, req.body.photo, req.body["scores[]"]);
+    res.json(friends.getBestie(newUser, friends.friendsArray))
+    //-------------------------------------------------------------------------
   });
-
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  app.post("/api/clear", function() {
-    // Empty out the arrays of data
-    userArr = [];
-    //waitListData = [];
-
-    console.log(userArr);
-  });
-};
+}
