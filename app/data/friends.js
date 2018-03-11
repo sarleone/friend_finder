@@ -8,6 +8,7 @@
 // Array to hold all of the friends that join!
 var friendsArray = [];
 
+// Friend constructor to hold friend info and compare user scores to the main FriendsArray
 function Friend(name, photo, scores) {
   this.name = name;
   this.photo = photo;
@@ -22,7 +23,7 @@ function Friend(name, photo, scores) {
     return totalDifference;
   }
 }
-
+// Find someone in our friendsArray list who has similar interests
 function getBestie(user, friendList) {
   var bestie = 9;
   var closest = 100;
@@ -39,6 +40,8 @@ function getBestie(user, friendList) {
   console.log(friends[bestie]);
   return friend[bestie]
 }
-
+//friendsArray.push(new Friend("Jesse","N/A",[5,5,5,5,5,5,5,5,5,5]));
+//console.log(friendsArray);
 // Note how we export the array. This makes it accessible to other files using require.
 module.exports = { friendsArray, Friend, getBestie};
+

@@ -22,7 +22,7 @@ module.exports = function(app) {
   app.use(bodyParser.json());
 
   app.get("/api/friends", function(req, res) {
-    res.json(friendsfriendsArray);
+    res.json(friendData.friendsArray);
   });
 
   // API POST Requests
@@ -38,8 +38,8 @@ module.exports = function(app) {
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body-parser middleware
     console.log(req.body); 
-    var userInput = new friends.Friend(req.body.name, req.body.photo, req.body["scores[]"]);
-    res.json(friends.getBestie(newUser, friends.friendsArray))
+    var userInput = new friendData.Friend(req.body.name, req.body.photo, req.body["scores[]"]);
+    res.json(friendData.getBestie(newUser, friendData.friendsArray))
     //-------------------------------------------------------------------------
   });
 }
