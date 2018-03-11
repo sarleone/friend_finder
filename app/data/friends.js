@@ -5,24 +5,40 @@
 // But you could have it be an empty array as well.
 // ===============================================================================
 
-var friendArray = [
-  {
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores":[
-        5,
-        1,
-        4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
-      ]
+// Array to hold all of the friends that join!
+var friendsArray = [];
+
+function Friend(name, photo, scores) {
+  this.name = name;
+  this.photo = photo;
+  this.scores = scores;
+  this.compare = function(otherFriend) {
+    var userScores = this.scores;
+    var theirScores = otherFriend.scores;
+    var totalDifference = 0;
+    for (var i=0; i<userScores.length; i++) {
+      totalDifference += Math.abs(userScores[i]-theirScores[i]);
+    }
+    return totalDifference;
   }
-];
+}
+
+function getBestie(user, friendList) {
+  var bestie = 9;
+  var closest = 100;
+  var friends = friendsArray;
+
+  for (var i=0; i<friends.length; i++) {
+    var totalDifference = user.compare(friends[i]);
+
+    if (totalDifference <= closest) {
+      closest = totalDifference;
+      bestie = i;
+    }
+  }
+  console.log(friends[bestie]);
+  return friend[bestie]
+}
 
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = friendArray;
+module.exports = { friendsArray, Friend, getBestie};
