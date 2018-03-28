@@ -5,7 +5,6 @@
 
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -22,25 +21,14 @@ var PORT = process.env.PORT || 8888;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Gets the html files to connect to the server
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, './app/public/home.html'));
-});
-app.get('/survey', function(req, res) {
-  res.sendFile(path.join(__dirname, './app/public/survey.html'));
-});
-
-// Serves static files
-app.use(express.static('public'));
-
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
 
-require(path.join(__dirname, "./app/routing/apiRoutes.js"))(app);
-require(path.join(__dirname, "./app/routing/htmlRoutes.js"))(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 // =============================================================================
 // LISTENER
