@@ -1,47 +1,109 @@
 // ===============================================================================
 // DATA
-// Below data will hold all of the reserved tables.
-// Initially we just set it equal to a "dummy" customer.
-// But you could have it be an empty array as well.
+// Below data will hold all of the possible friends
 // ===============================================================================
 
 // Array to hold all of the friends that join!
-var friendsArray = [];
-
-// Friend constructor to hold friend info and compare user scores to the main FriendsArray
-function Friend(name, photo, scores) {
-  this.name = name;
-  this.photo = photo;
-  this.scores = scores;
-  this.compare = function(otherFriend) {
-    var userScores = this.scores;
-    var theirScores = otherFriend.scores;
-    var totalDifference = 0;
-    for (var i=0; i<userScores.length; i++) {
-      totalDifference += Math.abs(userScores[i]-theirScores[i]);
-    }
-    return totalDifference;
+var friendsArray = [
+  {
+    name: "Tani",
+    photo: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [
+      "5",
+      "2",
+      "1",
+      "3",
+      "4",
+      "5",
+      "1",
+      "3",
+      "4",
+      "1"
+    ]
+  },
+  {
+    name: "Tareq",
+    photo: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [
+      "2",
+      "3",
+      "2",
+      "5",
+      "1",
+      "2",
+      "5",
+      "3",
+      "2",
+      "5"
+    ]
+  },
+  {
+    name: "Hadi",
+    photo: "https://images.pexels.com/photos/905470/pexels-photo-905470.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3"
+    ]
+  },
+  {
+    name: "Herold",
+    photo: "https://images.pexels.com/photos/415326/pexels-photo-415326.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  {
+    name: "Corela",
+    photo: "https://images.pexels.com/photos/573305/pexels-photo-573305.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5",
+      "5"
+    ]
+  },
+  {
+    name: "Dominique",
+    photo: "https://images.pexels.com/photos/819105/pexels-photo-819105.jpeg?auto=compress&cs=tinysrgb&h=350",
+    scores: [  
+      "5",
+      "4",
+      "3",
+      "5",
+      "2",
+      "3",
+      "2",
+      "5",
+      "3",
+      "2"
+    ]
   }
-}
-// Find someone in our friendsArray list who has similar interests
-function getBestie(user, friendList) {
-  var bestie = 9;
-  var closest = 100;
-  var friends = friendsArray;
 
-  for (var i=0; i<friends.length; i++) {
-    var totalDifference = user.compare(friends[i]);
+];
 
-    if (totalDifference <= closest) {
-      closest = totalDifference;
-      bestie = i;
-    }
-  }
-  console.log(friends[bestie]);
-  return friend[bestie]
-}
-//friendsArray.push(new Friend("Jesse","N/A",[5,5,5,5,5,5,5,5,5,5]));
-//console.log(friendsArray);
-// Note how we export the array. This makes it accessible to other files using require.
-module.exports = { friendsArray, Friend, getBestie};
+// Export friend array to make it accesible to other files
+module.exports = friendsArray;
 
