@@ -4,180 +4,150 @@
   <meta charset="UTF-8">
   <title>Friend Finder</title>
 
-  <!-- BOOTSTRAP  | JQUERY  | FONTAWESOME | CHOSEN -->
+  <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  <link rel="stylesheet" href="/css/survey-style.css" media="screen" charset="utf-8">  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
 </head>
 <body>
   <!-- SURVEY PAGE -->
   <div class="container">
-    <div class="panel-body" id="matchModal">
-        <!-- AJAX call data should append here from jQuery in submit.onclick function below -->
-    </div>
-      <!-- HEADER -->
-    <div class="jumbotron">
-      <h1 class="text-center"><i class="fas fa-users"></i> Friend Finder</h1>
-      <hr>
-      <br>
-    </div>
+    
+    <h2 class="panel-title">Survey Questions</h2>
+    <hr>
 
-    <div class="row">
-      <div class="col-lg-12">
+    <h3><strong>Getting to Know You</strong></h3>
+    <h4>Name <i>required</i></h4>
+    <input type="text" class="form-control" required id="user-name">
+    
+    <h4>Link to your photo image <i>required</i></h4>
+    <input type="text" class="form-control" required id="user-photo">
+    <hr>
 
-        <!-- SURVEY START -->
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">Survey Questions</h2>
-          </div>
-          <div class="panel-body">
+    <!-- QUESTIONS -->
+    <h4><Strong>Question 1</strong></h4>
+    <h4>I am a critical thinking feminist</h4>
+    <select class="chosen-select" id="select1">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
 
-            <form role="form">
+    <h4><Strong>Question 2</strong></h4>
+    <h4>I enjoy keeping up with local artists</h4>
+    <select class="chosen-select" id="select2">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>  
+    </select>
 
-              <div class="form-group">
-                <label for="user-name">Name <i>required</i></label>
-                <input type="text" class="form-control" id="user-name">
-              </div>
+    <h4><Strong>Question 3</strong></h4>
+    <h4>I like to play sports</h4>
+    <select class="chosen-select" id="select3">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option> 
+    </select>
 
-              <div class="form-group">
-                <label for="user-photo">Link to your photo image <i>required</i></label>
-                <input type="text" class="form-control" id="user-photo">
-              </div>
-              <hr>
-                <!-- QUESTIONS -->
-              <div class="form-group">
-                <h4>Question 1</h4>
-                <label for="select1">I am a critical thinking feminist</label>
-                <select class="form-control" id="select1">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 2</h4>
-                <label for="select2">I enjoy keeping up with local artists</label>
-                <select class="form-control" id="select2">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>  
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 3</h4>
-                <label for="select3">I like to play sports</label>
-                <select class="form-control" id="select3">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option> 
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 4</h4>  
-                <label for="select4">I'm free nights and weekends</label>
-                <select class="form-control" id="select4">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 5</h4>
-                <label for="select5">I'm have a flexible schedule</label>
-                <select class="form-control" id="select5">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 6</h4>  
-                <label for="select6">I like to go out and experience the nightlife</label>
-                <select class="form-control" id="select6">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 7</h4>
-                <label for="select7">I like to stay in with my computer tv</label>
-                <select class="form-control" id="select7">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 8</h4>
-                <label for="select8">I am open to new experiences and being uncomfortable</label>
-                <select class="form-control" id="select8">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 9</h4>
-                <label for="select9">I am often grateful</label>
-                <select class="form-control" id="select9">
-                  <option value=""></option>  
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <h4>Question 10</h4>
-                <label for="select10">I try to engineer a happy life for myself</label>
-                <select class="form-control" id="select10">
-                  <option value=""></option>
-                  <option value="1">1 (strongly disagree)</option>
-                  <option value="2">2 (disagree)</option>
-                  <option value="3">3 (neutral)</option>
-                  <option value="4">4 (agree)</option>
-                  <option value="5">5 (strongly agree)</option>
-                </select>
-              </div>
-              <!-- SUBMIT BUTTON -->
-              <a href="#"><button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-square-o" aria-hidden="true"></i>
-                Submit</button></a>            
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h4><Strong>Question 4</strong></h4>  
+    <h4>I'm free nights and weekends</h4>
+    <select class="chosen-select" id="select4">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 5</strong></h4>
+    <h4>I'm have a flexible schedule</h4>
+    <select class="chosen-select" id="select5">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 6</strong></h4>  
+    <h4>I like to go out and experience the nightlife</h4>
+    <select class="chosen-select" id="select6">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 7</strong></h4>
+    <h4>I like to stay in with my computer tv</h4>
+    <select class="chosen-select" id="select7">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 8</strong></h4>
+    <h4>I am open to new experiences and being uncomfortable</h4>
+    <select class="chosen-select" id="select8">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 9</strong></h4>
+    <h4>I am often grateful</h4>
+    <select class="chosen-select" id="select9">
+      <option value=""></option>  
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <h4><Strong>Question 10</strong></h4>
+    <h4>I try to engineer a happy life for myself</h4>
+    <select class="chosen-select" id="select10">
+      <option value=""></option>
+      <option value="1">1 (strongly disagree)</option>
+      <option value="2">2 (disagree)</option>
+      <option value="3">3 (neutral)</option>
+      <option value="4">4 (agree)</option>
+      <option value="5">5 (strongly agree)</option>
+    </select>
+
+    <br><br>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-square-o" aria-hidden="true"></i>
+      Submit</button>           
     <hr>
     <footer class="footer">
       <div class="container">
@@ -187,66 +157,100 @@
   </div>
 
   <!-- MODAL -->
-  <div class="modal fade" id="bestie" tabindex="-1" role="dialog" aria-labelledby="friendName" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="friendName"></h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-           <img id="friendPic" src="" alt="Your new friend's picture">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+  <div class="modal fade" id="bestie" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Your bestie!</strong></h2>
+        </div>
+        <div class="modal-body">
+          <img id="friendPic" src="https://images.pexels.com/photos/157966/person-young-man-beard-emotions-157966.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-</div>
-<!-- HOW FORM DATA IS SENT TO OUR SERVER -->
-<script type="text/javascript">
+  </div>
+<!-- JAVASCRIPT -->
+  <script type="text/javascript">
+    // Chosen CSS
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect":{
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Uh-oh, nothing was found!"
+      },
+      ".chosen-select-width" {
+        width: "95%"
+      }
+    };
 
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the friends.js file
-
-  $("#submit").on("click", function(event) {
-    console.log("submitted");
-    console.log(event);
-    event.preventDefault();
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
     // Here we grab the form elements
-    var newUser = {
-      name: $("#user-name").val(),
-      photo:  $("#user-photo").val(),
-      scores: [$("#select1").val(), $("#select2").val(), $("#select3").val(), $("#select4").val(), $("#select5").val(),
-        $("#select6").val(), $("#select7").val(), $("#select8").val(), $("#select9").val(), $("#select10").val()]
-    }
-    console.log(newUser);
-    
-    var currentURL = window.location.origin;
-    console.log(currentURL);
-    $.ajax({
-      url: currentURL + "/api/friends",
-      method: "POST",
-      data: newUser,
-      traditional: true
-    })
-    .done(function(data){
-      console.log("Data: " + data);
-      $("#friendName").text(bestie.name);
-      $("#friendPic").attr("src",bestie.photo);
-      $('#bestie').modal();
-      $("#user-name").val("");
-      $("#user-photo").val("");
-    })
-  });
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
 
-</script>
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function(){
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        
+        $(".chosen-select").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }  
+      
+      // If all requirements are fulfilled...
+      if (validateForm()) {
+        var newUser = {
+          name: $("#user-name").val(),
+          photo:  $("#user-photo").val(),
+          scores: [
+            $("#select1").val(),
+            $("#select2").val(), 
+            $("#select3").val(), 
+            $("#select4").val(), 
+            $("#select5").val(),
+            $("#select6").val(), 
+            $("#select7").val(), 
+            $("#select8").val(), 
+            $("#select9").val(), 
+            $("#select10").val()
+          ]
+        };
+        
+        // Ajax post the data to friends API
+        $.post("/api/friends", userData, function(data){
+          // grab result from AJAX post to find your besties name and photo
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+  </script>
 
 </body>
 </html>
