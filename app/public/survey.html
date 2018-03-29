@@ -146,9 +146,9 @@
     <br><br>
 
     <!-- SUBMIT BUTTON -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-square-o" aria-hidden="true"></i>
-      Submit</button>           
-    <hr>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+      Submit</button>
+     <hr>
     <footer class="footer">
       <div class="container">
         <p><a href="/api/friends">API Friend Link</a> | <a href="https://github.com/sarleone/friend_finder">GitHub Repo</a></p>
@@ -157,7 +157,7 @@
   </div>
 
   <!-- MODAL -->
-  <div class="modal fade" id="bestie" role="dialog">
+  <div class="modal fade" id="results-modal" role="dialog">
     <div class="modal-dialog">
 
       <div class="modal-content">
@@ -166,7 +166,8 @@
           <h2 class="modal-title"><strong>Your bestie!</strong></h2>
         </div>
         <div class="modal-body">
-          <img id="friendPic" src="https://images.pexels.com/photos/157966/person-young-man-beard-emotions-157966.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://images.pexels.com/photos/157966/person-young-man-beard-emotions-157966.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -188,7 +189,7 @@
       ".chosen-select-no-results": {
         no_results_text: "Uh-oh, nothing was found!"
       },
-      ".chosen-select-width" {
+      ".chosen-select-width": {
         width: "95%"
       }
     };
@@ -220,7 +221,7 @@
       
       // If all requirements are fulfilled...
       if (validateForm()) {
-        var newUser = {
+        var userData = {
           name: $("#user-name").val(),
           photo:  $("#user-photo").val(),
           scores: [
