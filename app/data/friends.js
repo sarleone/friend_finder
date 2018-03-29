@@ -7,7 +7,7 @@
 var friends = [
   {
     name: "Tani",
-    photo: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-3.jpg",
     scores: [
       "5",
       "2",
@@ -23,7 +23,7 @@ var friends = [
   },
   {
     name: "Tareq",
-    photo: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-1.jpg",
     scores: [
       "5",
       "5",
@@ -39,7 +39,7 @@ var friends = [
   },
   {
     name: "Hadi",
-    photo: "https://images.pexels.com/photos/905470/pexels-photo-905470.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-5.jpg",
     scores: [
       "3",
       "3",
@@ -55,7 +55,7 @@ var friends = [
   },
   {
     name: "Herold",
-    photo: "https://images.pexels.com/photos/415326/pexels-photo-415326.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-8.jpg",
     scores: [
       "1",
       "1",
@@ -71,7 +71,7 @@ var friends = [
   },
   {
     name: "Corela",
-    photo: "https://images.pexels.com/photos/573305/pexels-photo-573305.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-9.jpg",
     scores: [
       "5",
       "5",
@@ -87,7 +87,7 @@ var friends = [
   },
   {
     name: "Dominique",
-    photo: "https://images.pexels.com/photos/819105/pexels-photo-819105.jpeg",
+    photo: "http://lorempixel.com/output/people-q-c-200-200-4.jpg",
     scores: [  
       "5",
       "4",
